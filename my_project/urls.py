@@ -1,7 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('reservations.urls')),
+    path('', views.reservation_list, name='reservation_list'),
+    path('create/', views.create_reservation, name='create_reservation'),
 ]

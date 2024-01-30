@@ -1,11 +1,10 @@
 from django.db import models
-from django.contrib.auth.models import User
-
-class Table(models.Model):
-    capacity = models.IntegerField()
 
 class Reservation(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    table = models.ForeignKey(Table, on_delete=models.CASCADE)
-    date = models.DateField()
-    time = models.TimeField()
+    guest_name = models.CharField(max_length=100)
+    reservation_date = models.DateField()
+    reservation_time = models.TimeField()
+    num_guests = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.guest_name} - {self.reservation_date} - {self.reservation_time}"
