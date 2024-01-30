@@ -1,39 +1,85 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Django Restaurant Reservation System
 
-Welcome,
+This is a Django-based web application for managing restaurant reservations. The system allows users to create, view, edit, and delete reservations for guests.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+- Create new reservations with guest details, date, time, and number of guests.
+- View a list of all reservations with basic details.
+- Edit existing reservations to update guest information, date, time, or number of guests.
+- Delete reservations that are no longer needed.
 
-## Codeanywhere Reminders
+## Installation
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+1. Clone the repository to your local machine:
 
-`python3 -m http.server`
+    ```
+    git clone [https://github.com/your-username/restaurant-reservation-system.git](https://github.com/Yaheaalani00/project4)
+    ```
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+2. Navigate to the project directory:
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+    ```
+    cd restaurant-reservation-system
+    ```
 
-`http_server`
+3. Install the required dependencies:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+    ```
+    pip install -r requirements.txt
+    ```
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+4. Run the development server:
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    ```
+    python manage.py runserver
+    ```
 
-To log into the Heroku toolbelt CLI:
+5. Access the application at [http://localhost:8000/](http://localhost:8000/)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Configuration
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+1. Database Configuration:
+   - By default, the project uses SQLite as the database backend. You can configure other database backends in the `settings.py` file.
 
----
+2. Static Files and Media:
+   - Static files (CSS, JavaScript) are served from the `static` directory.
+   - Uploaded media files are stored in the `media` directory.
 
-Happy coding!
+3. Authentication and Authorization:
+   - The project includes basic authentication for managing reservations. Additional authentication mechanisms can be added as needed.
+
+## Usage
+
+1. Create Reservation:
+   - Navigate to the 'Create Reservation' page and fill in the required details to make a new reservation.
+
+2. View Reservations:
+   - Access the 'Reservation List' page to view all existing reservations.
+
+3. Edit/Delete Reservation:
+   - From the reservation list, you can edit or delete individual reservations as needed.
+
+## Testing
+
+1. Run Python tests:
+    ```
+    python manage.py test
+    ```
+
+2. Run JavaScript tests:
+    ```
+    npm test
+    ```
+
+## Deployment
+
+1. Ensure all configuration settings are properly adjusted for deployment, including database settings, static files handling, and security settings.
+
+2. Deploy the application to your preferred hosting platform, such as Heroku, AWS, or DigitalOcean.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvement, please submit a GitHub issue or create a pull request with your proposed changes.
+
+
