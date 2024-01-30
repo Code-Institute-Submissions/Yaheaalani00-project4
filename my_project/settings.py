@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-&-y98zy6f+j4b&#wug@^issk*!((kbz1u*0ned!p8lasz1_$+@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-yaheaalani00-project4-w995sd6rq0.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-yaheaalani00-project4-4eazso5sbf.us2.codeanyapp.com']
 
 
 # Application definition
@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'reservations'
 ]
 
 MIDDLEWARE = [
@@ -42,7 +43,7 @@ ROOT_URLCONF = 'my_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
