@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Restaurant Booking System{% endblock %}</title>
+    <!-- Include common CSS files -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Restaurant Booking System</h1>
+      <!-- Include navigation menu or other common header elements -->
+    </header>
+
+    <main>
+      <!-- Content specific to individual pages will go here -->
+      {% block content %} {% endblock %}
+    </main>
+
+    <footer>
+      <!-- Include footer content -->
+      <p>&copy; 2024 Restaurant Booking System</p>
+    </footer>
+
+    <!-- Include common JavaScript files -->
+    <script src="{% static 'js/reservations.js' %}"></script>
+  </body>
+</html>

@@ -1,14 +1,26 @@
-{% extends 'base.html' %} {% block title %}My Reservations{% endblock %} {%
+{% extends 'base.html' %} {% block title %}List Reservations{% endblock %} {%
 block content %}
-<h2>My Reservations</h2>
-<ul>
-  {% for reservation in reservations %}
-  <li>
-    {{ reservation.date }} at {{ reservation.time }} - Table {{
-    reservation.table }}
-  </li>
-  {% empty %}
-  <li>No reservations found.</li>
-  {% endfor %}
-</ul>
+<h2>Reservations</h2>
+<!-- Display list of reservations -->
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Table</th>
+      <!-- Add additional table headers as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop through reservations and display in table rows -->
+    {% for reservation in reservations %}
+    <tr>
+      <td>{{ reservation.date }}</td>
+      <td>{{ reservation.time }}</td>
+      <td>{{ reservation.table }}</td>
+      <!-- Add additional table cells for other reservation details -->
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
