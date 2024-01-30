@@ -8,6 +8,3 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.guest_name} - {self.reservation_date} - {self.reservation_time}"
-    
-    class Meta:
-        app_label = 'reservations'
